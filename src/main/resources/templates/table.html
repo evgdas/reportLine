@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Reports</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+</head>
+<h1 align="center">Отчет о готовой продукции</h1><br>
+
+<div th:if="${not #lists.isEmpty(reportDataFiltred)}">
+
+    <div align="center">
+        <a th:href="@{/exportCSV}"> Exports to csv </a>
+<p th:text="${messageSaveReport}"></p>
+        <table class="reportTable">
+
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Line #</th>
+                <th>Product name</th>
+                <th>Weight</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr th:each="reportData:${reportDataFiltred}">
+
+                <td th:text="${reportData.getId()}">Id</td>
+                <td th:text="${reportData.getDate()}">Data</td>
+                <td align="center" th:text="${reportData.getLine()}">Line</td>
+                <td align="center" th:text="${reportData.getProduct()}">Product</td>
+                <td align="center" th:text="${reportData.getWeight()}">Weight</td>
+            </tr>
+            <tr>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td align="right">Итого:</td>
+                <td align="center" th:text="${totalWeight}">Weight </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+</html>

@@ -1,0 +1,62 @@
+.reportTable {
+    width: 75%; /* Ширина таблицы */
+    border: 2px double black; /* Рамка вокруг таблицы */
+    border-collapse: collapse; /* Отображать только одинарные линии */
+    font-size:24px;
+}
+.reportTable thead tr {color: #ffffff; font-weight: bold; background-color: #00bf80;}
+.reportTable th {
+    text-align: left; /* Выравнивание по левому краю */
+    padding: 5px; /* Поля вокруг содержимого ячеек */
+    border: 1px solid black; /* Граница вокруг ячеек */
+}
+.reportTable td {
+    padding: 5px; /* Поля вокруг содержимого ячеек */
+    border: 1px solid black; /* Граница вокруг ячеек */
+}
+.reportTable tbody tr:nth-child(2n) {background: #f4f4f4;}
+.reportTable tr:hover {background: #baffaf;}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+.selector1 {
+    width: 120px;
+    height: 30px;
+    border: 1px solid #eee;
+    font-size: 18px;
+    color: #4CAF50;
+    background-color: #eee;
+    border-radius: 5px;
+
+}
+
+
+input {font-size: 18px; width: 20ch}
+label {font-size: 18px; display: inline-block; width: 200px;text-align: left;}
+

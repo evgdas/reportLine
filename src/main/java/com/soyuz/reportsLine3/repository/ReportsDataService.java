@@ -44,13 +44,14 @@ public class ReportsDataService {
         String csvFile = "C:\\csv\\report" + timeNow.format(formater) + ".csv";
         FileWriter writer = new FileWriter(csvFile);
         //for header
-        CsvExport.writeLine(writer, Arrays.asList("Id", "Date", "Line", "Product", "Weight"));
+        CsvExport.writeLine(writer, Arrays.asList("Id", "Date", "Line", "Filler", "Product", "Weight"));
         for (ReportsProduct r : dataForExport) {
 
             List<String> list = new ArrayList<>();
             list.add(String.valueOf(r.getId()));
             list.add(r.getDate().toString());
             list.add(String.valueOf(r.getLine()));
+            list.add(String.valueOf(r.getFiller()));
             list.add(r.getProduct());
             list.add(String.valueOf(r.getWeight()));
             CsvExport.writeLine(writer, list);

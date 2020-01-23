@@ -4,32 +4,30 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "MES_EndProduct", schema = "", catalog = "")
+@Table(name = "Product", schema = "", catalog = "")
 public class ReportsProduct {
     @Id
     @GeneratedValue
     @Column(name = "id")
-
     private long id;
 
-    @Column(name = "Datum/Zeit")
+    @Column(name = "data")
     private LocalDateTime date;
-    @Column(name = "Rezept")
+    @Column(name = "rezept")
     private String product;
-    @Column(name = "IstGewicht")
+    @Column(name = "weight")
     private float weight;
-    @Column(name = "FuellerNr")
+    @Column(name = "line")
     private int line;
-    @Column(name = "Waage")
+    @Column(name = "filler")
+    private int filler;
 
-    private int waage;
-
-    public int getWaage() {
-        return waage;
+    public int getFiller() {
+        return filler;
     }
 
-    public void setWaage(int waage) {
-        this.waage = waage;
+    public void setFiller(int filler) {
+        this.filler = filler;
     }
     protected ReportsProduct() {
     }

@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "rep", schema = "", catalog = "")
+@Table(name = "MES_EndProduct", schema = "", catalog = "")
 public class ReportsProduct {
     @Id
     @GeneratedValue
@@ -12,11 +12,25 @@ public class ReportsProduct {
 
     private long id;
 
+    @Column(name = "Datum/Zeit")
     private LocalDateTime date;
+    @Column(name = "Rezept")
     private String product;
+    @Column(name = "IstGewicht")
     private float weight;
+    @Column(name = "FuellerNr")
     private int line;
+    @Column(name = "Waage")
 
+    private int waage;
+
+    public int getWaage() {
+        return waage;
+    }
+
+    public void setWaage(int waage) {
+        this.waage = waage;
+    }
     protected ReportsProduct() {
     }
 
